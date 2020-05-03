@@ -1,8 +1,9 @@
 use yew::{html, Component, ComponentLink, Html, ShouldRender};
 
-pub struct Page2 {}
+use crate::components::*;
+pub struct Page4 {}
 
-impl Component for Page2 {
+impl Component for Page4 {
     type Message = ();
     type Properties = ();
 
@@ -23,7 +24,9 @@ impl Component for Page2 {
     fn view(&self) -> Html {
         html! {
             <div class="full-height">
-                <h1>{"Page2"}</h1>
+                {"In this example we pass the name as parameter of the Yew component."}
+                // <UseOfPropertyComponent name="Clark"/>
+                <UseOfPropertyComponent />
             </div>
         }
     }

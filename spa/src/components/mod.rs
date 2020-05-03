@@ -1,21 +1,13 @@
-mod app_container;
-mod page1;
-mod page2;
+mod comp1;
+mod comp2;
+mod comp3;
+mod comp4;
+mod comp5;
+mod comp6;
 
-use yew_router::Switch;
-
-#[derive(Debug, Switch, Clone)]
-pub enum AppRoute {
-    #[to = "/app/main"]
-    Main,
-    #[to = "/app/page1"]
-    Page1,
-    #[to = "/app/page2"]
-    Page2,
-    // #[to = "/app/{pagename}"]
-    // Page(String),
-}
-
-pub use app_container::AppContainer;
-pub use page1::Page1;
-pub use page2::Page2;
+pub use comp1::SimpleComponent;
+pub use comp2::InternalStateComponent;
+pub use comp3::TrapEventComponent;
+pub use comp4::UseOfPropertyComponent;
+pub use comp5::EmitEventComponent;
+pub use comp6::ClassPropertyComponent;

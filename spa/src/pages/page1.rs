@@ -1,5 +1,7 @@
 use yew::{html, Component, ComponentLink, Html, ShouldRender};
 
+use crate::components::SimpleComponent;
+
 pub struct Page1 {}
 
 impl Component for Page1 {
@@ -23,7 +25,7 @@ impl Component for Page1 {
     fn view(&self) -> Html {
         html! {
             <div class="full-height">
-                <h1>{"Page1"}</h1>
+                <SimpleComponent />
             </div>
         }
     }

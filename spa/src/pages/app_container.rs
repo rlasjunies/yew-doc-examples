@@ -3,7 +3,7 @@ use super::AppRoute;
 use yew::{html, Component, ComponentLink, Html, ShouldRender};
 use yew_router::{service::RouteService, Switch};
 
-use super::{Page1, Page2};
+use super::*;
 
 pub struct AppContainer {
     route_service: RouteService<()>,
@@ -34,8 +34,12 @@ impl Component for AppContainer {
             <div class="full-height">
                 <menu>
                     <a href="/app/main">{ "Home" }</a>
-                    <a href="/app/page1">{ "Page1" }</a>
-                    <a href="/app/page2">{ "Page2" }</a>
+                    <a href="/app/page1">{ "1- Simple Component" }</a>
+                    <a href="/app/page2">{ "2- Internal state" }</a>
+                    <a href="/app/page3">{ "3- Trap events" }</a>
+                    <a href="/app/page4">{ "4- Use properties" }</a>
+                    <a href="/app/page5">{ "5- Emit events" }</a>
+                    <a href="/app/page6">{ "6- Class component" }</a>
                 </menu>
                 <div class="main-pane full-height">
                     { self.view_app_content() }
@@ -51,7 +55,7 @@ impl AppContainer {
         match AppRoute::switch(route) {
             Some(AppRoute::Main) => html! {
                 <>
-                    <h1>{"Welcome in this yew template project"}</h1>
+                    <h1>{"This project is made to test some examples used in the documentation"}</h1>
                 </>
             },
             Some(AppRoute::Page1) => html!{
@@ -64,13 +68,33 @@ impl AppContainer {
                     <Page2/>
                 </>
             },
+            Some(AppRoute::Page3) => html!{
+                <>
+                    <Page3/>
+                </>
+            },
+            Some(AppRoute::Page4) => html!{
+                <>
+                    <Page4/>
+                </>
+            },
+            Some(AppRoute::Page5) => html!{
+                <>
+                    <Page5/>
+                </>
+            },
+            Some(AppRoute::Page6) => html!{
+                <>
+                    <Page6/>
+                </>
+            },
             // Some(AppRoute::Page(page)) => html! {
             //     <>
             //     // <Page1 />
             //     </>
             // },
             _ => html! {
-                <div>{ "Route not found" }</div>
+                <div>{ "Route not found. You may mistyped the URL. Use the links in the top of the page" }</div>
             },
         }
     }

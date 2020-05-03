@@ -1,6 +1,9 @@
 #![recursion_limit = "512"]
 
 mod components;
+pub use components::SimpleComponent;
+
+mod pages;
 
 use wasm_bindgen::prelude::*;
 
@@ -12,7 +15,7 @@ pub fn run_app() -> Result<(), JsValue> {
         .unwrap()
         .expect("Cannot find app-container element");
 
-    yew::App::<components::AppContainer>::new().mount(element);
+    yew::App::<pages::AppContainer>::new().mount(element);
     yew::run_loop();
 
     Ok(())
