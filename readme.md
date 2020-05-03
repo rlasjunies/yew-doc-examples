@@ -4,10 +4,13 @@ project to collect some examples used for the documentation
 
 ## Pages
 
-- [ ] page 1: simple component
-- [ ] page 2: internal state
-
-- [ ]  
+- [x] page 1: simple component
+- [x] page 2: internal state
+- [x] page 3: trap events
+- [x] page 4: Use properties
+- [x] page 5: Emit events
+- [x] page 6: Class component
+- [ ] ???
 
 ## How to use
 
